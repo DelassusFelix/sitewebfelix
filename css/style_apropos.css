@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
+    background-color: black;
+}
+
+header {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background_accueil_flou.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.25em;
+}
+
+.navbar .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.navbar .navlinks ul {
+    display: flex;
+}
+
+.navbar .navlinks ul li {
+    margin: 0 30px;
+}
+
+.navbar .navlinks ul li a.active {
+    color: #00ff00;
+    font-weight: 700;
+}
+
+.navbar #auto_top {
+    z-index: 2;
+}
+
+#auto_top {
+    display: none;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    padding-right: 50px;
+    z-index: 2;
+    width: 50px;
+}
+
+.texte {
+    text-align: justify;
+    text-shadow: black 1px 0 10px;
+    width: 75%;
+    padding: 5vw 8vw 5vw 8vw;
+    margin: 0 0 7vh 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-size: calc(0.7rem + 0.5vw);
+}
+
+.texte h1 {
+    text-align: center;
+    font-size: calc(1.5rem + 1.5vw);
+    text-shadow: black 1px 0 10px;
+    margin-bottom: 25px;
+}
+
+.tableau {
+    border-collapse: collapse;
+    border: 0px;
+}
+
+h2 {
+    font-size: calc(1rem + 1vw);
+}
+
+.sisr {
+    width: 50%;
+    padding: 2%;
+    padding-right: 5%;
+    text-align: justify;
+    vertical-align: top;
+    border: 0px;
+    border-right: 3px solid white;
+}
+
+.slam {
+    width: 50%;
+    padding: 2%;
+    padding-left: 5%;
+    text-align: justify;
+    vertical-align: top;
+    border: 0px;
+}
+
+.liste_metiers {
+    margin-left: 25px;
+    text-align: left;
+}
+
+.texte .img {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.texte img {
+    width: 60%;
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 1600px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        padding: 30px;
+    }
+
+    .navlinks {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(7px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: margin-left 0.5s ease;
+    }
+
+    .navbar .menu-hamburger, 
+    #auto_top{
+        display: block;
+    }
+
+    .navlinks ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navlinks ul li {
+        margin: 30px 0;
+        font-size: 1.5em;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .tableau .sisr, .slam {
+        border: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .slam {
+        margin-top: 5vh;
+    }
+
+    .tableau tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+}
+
+
+@media screen and (max-height: 800px) and (max-width: 1600px) {
+
+    .navbar .navlinks ul li {
+        margin: 15px 0;
+        font-size: 1.2em;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .navbar .logo {
+        font-size: 1.9em;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .navbar .logo {
+        font-size: 1.6em
+    }
+    
+    .navbar .menu-hamburger {
+        right: 20px;
+    }
+
+    .navbar .logo {
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    .navbar .menu-hamburger {
+        width: 25px;
+        top: 44px;
+    }
+
+    .navbar .logo {
+        font-size: 1.2em;
+    }
+
+}

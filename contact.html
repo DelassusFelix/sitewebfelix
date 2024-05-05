@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <title> Contact </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portefolio de présentation de mon parcours">
+    <meta name="keywords" content="BTS, SIO, Portefolio">
+    <meta name="author" content="Delassus Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/logo.ico">
+    <link rel="stylesheet" href="css/style_contact.css">
+
+</head>
+
+<script src="js/gestion_iframe.js"></script>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">DELASSUS Felix</a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li> <a href=index.html> Accueil </a> </li>
+                <li> <a href=a_propos.html> Le BTS SIO </a> </li>
+                <li> <a href=profil.html> Profil </a> </li>
+                <li> <a href=competences.html> Compétences </a> </li>
+                <li> <a href=veille_techno.html> Veille Techno </a> </li>
+                <li> <a class="active" href=contact.html> Contact </a> </li>
+            </ul>
+        </div>
+
+        <a href="#top" id="auto_top"><img src="images/hamburger.ico" alt="menu deroulant" class="menu-hamburger"
+                onclick="open_close()"></a>
+
+    </nav>
+
+    <script type="text/javascript">
+
+        var isActive = document.getElementById("navlinks");
+
+        function open_close() {
+
+            if (isActive.classList == "navlinks active") {
+                document.getElementById("navlinks").style.marginLeft = '-100%';
+                document.querySelector("body").style.overflow = 'visible';
+                isActive.classList.remove("active");
+            } else {
+                document.getElementById("navlinks").style.marginLeft = '0%';
+                document.querySelector("body").style.overflow = 'hidden';
+                isActive.classList.add("active");
+            }
+        }
+
+    </script>
+
+    <header>
+
+        <div class="global_container">
+
+            <h1>Contact</h1>
+
+            <form class="formulaire_container" action="php/envoi_mess.php" method="post">
+
+                <div class="mail">
+                    <h3>Adresse mail : </h3>
+                    <p> delassus.felix@gmail.com </p>
+                </div>
+
+                <div class="tel">
+                    <h3>Téléphone : </h3>
+                    <p> 07 50 45 35 87 </p>
+                </div>
+
+                <div class="input_container">
+
+                    <div class="personal_infos_container">
+
+                        <input type="text" name="nom" placeholder="Nom *" required>
+                        <input type="text" name="prenom" placeholder="Prénom *" required>
+
+                        <input type="email" name="mail" placeholder="Email *" required>
+
+                    </div>
+
+                    <div class="message_container">
+                        <textarea id="message" name="mess" placeholder="Votre message *" required></textarea>
+                    </div>
+
+                </div>
+
+                <p id="chp_required">* Champ obligatoire</p>
+
+                <input type="submit" value="Envoyer">
+
+            </form>
+
+        </div>
+
+    </header>
+
+</body>

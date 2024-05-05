@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <title> Accueil </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portefolio de présentation de mon parcours">
+    <meta name="keywords" content="BTS, SIO, Portefolio">
+    <meta name="author" content="Delassus Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="shortcut icon" href="images/logo.ico">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">DELASSUS Felix</a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li> <a class="active" href=index.html> Accueil </a> </li>
+                <li> <a href=a_propos.html> Le BTS SIO </a> </li>
+                <li> <a href=profil.html> Profil </a> </li>
+                <li> <a href=competences.html> Compétences </a> </li>
+                <li> <a href=veille_techno.html> Veille Techno </a> </li>
+                <li> <a href=contact.html> Contact </a> </li>
+            </ul>
+        </div>
+
+        <a href="#top" id="auto_top"><img src="images/hamburger.ico" alt="menu deroulant" class="menu-hamburger"
+                onclick="open_close()"></a>
+
+    </nav>
+
+    <header>
+
+        <div class="contenu">
+
+            <h1>DELASSUS Félix</h1>
+            <h1> BTS SIO option SLAM</h1>
+
+            <a href="profil.html">En savoir plus</a>
+
+        </div>
+
+    </header>
+
+
+
+    <script type="text/javascript">
+
+        var isActive = document.getElementById("navlinks");
+
+        function open_close() {
+
+            if (isActive.classList == "navlinks active") {
+                document.getElementById("navlinks").style.marginLeft = '-100%';
+                document.querySelector("body").style.overflow = 'visible';
+                isActive.classList.remove("active");
+            } else {
+                document.getElementById("navlinks").style.marginLeft = '0%';
+                document.querySelector("body").style.overflow = 'hidden';
+                isActive.classList.add("active");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>

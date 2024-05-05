@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <title> Le BTS SIO </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portefolio de présentation de mon parcours">
+    <meta name="keywords" content="BTS, SIO, Portefolio">
+    <meta name="author" content="Delassus Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/logo.ico">
+    <link rel="stylesheet" href="css/style_apropos.css">
+
+</head>
+
+<body id="top">
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">DELASSUS Felix</a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li> <a href=index.html> Accueil </a> </li>
+                <li> <a class="active" href=a_propos.html> Le BTS SIO </a> </li>
+                <li> <a href=profil.html> Profil </a> </li>
+                <li> <a href=competences.html> Compétences </a> </li>
+                <li> <a href=veille_techno.html> Veille Techno </a> </li>
+                <li> <a href=contact.html> Contact </a> </li>
+            </ul>
+        </div>
+
+        <a href="#top" id="auto_top"><img src="images/hamburger.ico" alt="menu deroulant" class="menu-hamburger"
+                onclick="open_close()"></a>
+
+    </nav>
+
+    <script type="text/javascript">
+
+        var isActive = document.getElementById("navlinks");
+
+        function open_close() {
+
+            if (isActive.classList == "navlinks active") {
+                document.getElementById("navlinks").style.marginLeft = '-100%';
+                document.querySelector("body").style.overflow = 'visible';
+                isActive.classList.remove("active");
+            } else {
+                document.getElementById("navlinks").style.marginLeft = '0%';
+                document.querySelector("body").style.overflow = 'hidden';
+                isActive.classList.add("active");
+            }
+        }
+
+
+    </script>
+
+    <header>
+
+        <div class=texte>
+
+            <h1> Le BTS SIO </h1>
+
+            <p>
+                Le BTS Services informatiques aux Organisations est un diplôme reconnu par l’état de niveau Bac+2. Cette
+                formation propose deux spécialités bien distinctes : le BTS SIO SISR et le BTS SIO SLAM.
+            </p>
+            <br>
+            <br>
+            <table class="tableau" border="5px">
+                <tr>
+                    <td class="sisr">
+                        <h2> option SISR </h2>
+                        <br>
+                        <p>
+                            L’option Solutions d’infrastructure, systèmes et réseaux forme des professionnels des
+                            réseaux et
+                            équipements
+                            informatiques (installation, maintenance, sécurité). En sortant d’un BTS SIO SISR, vous
+                            serez
+                            capables de
+                            gérer et d’administrer le réseau d’une société et d’assurer sa sécurité et sa maintenance.
+                            <br>
+                            Les techniciens supérieurs en informatique option SISR, peuvent accéder aux métiers de :
+                            <br>
+                        </p>
+                        <br>
+                        <ul class="liste_metiers">
+                            <li> Administrateur systèmes et réseaux </li>
+                            <li> Informaticien support et déploiement </li>
+                            <li> Pilote d’exploitation </li>
+                            <li> Support systèmes et réseaux </li>
+                            <li> Technicien d’infrastructure </li>
+                            <li> Technicien de production </li>
+                            <li> Technicien micro et réseaux </li>
+                        </ul>
+
+                        <br>
+
+                        <div class="img">
+                            <img src="images/photo_sisr.jpg">
+                        </div>
+
+                    </td>
+                    <td class="slam">
+                        <h2> option SLAM </h2>
+                        <br>
+                        <p>
+                            L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels
+                            (rédaction d’un
+                            cahier des charges, formulation des besoins et spécifications, développement, intégration au
+                            sein de
+                            la
+                            société).
+                            <br><br>
+                            Les techniciens supérieurs en informatique option slam, sont préparés aux métiers de : <br>
+                        </p>
+                        <br>
+                        <ul class="liste_metiers">
+                            <li> Développeur d’applications informatiques </li>
+                            <li> Développeur informatique </li>
+                            <li> Analyste d’applications ou d’études </li>
+                            <li> Analyste programmeur </li>
+                            <li> Chargé d’études informatiques </li>
+                            <li> Informaticien d’études </li>
+                            <li> Programmeur analyste </li>
+                            <li> Programmeur d’applications </li>
+                        </ul>
+
+                        <br>
+
+                        <div class="img">
+                            <img src="images/photo_slam.jpg">
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </header>
+
+</body>
+
+</html>

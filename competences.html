@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <title> Accueil </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portefolio de présentation de mon parcours">
+    <meta name="keywords" content="BTS, SIO, Portefolio">
+    <meta name="author" content="Delassus Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style_competences.css">
+    <link rel="shortcut icon" href="images/logo.ico">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">DELASSUS Felix</a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li> <a href=index.html> Accueil </a> </li>
+                <li> <a href=a_propos.html> Le BTS SIO </a> </li>
+                <li> <a href=profil.html> Profil </a> </li>
+                <li> <a class="active" href=competences.html> Compétences </a> </li>
+                <li> <a href=veille_techno.html> Veille Techno </a> </li>
+                <li> <a href=contact.html> Contact </a> </li>
+            </ul>
+        </div>
+
+        <a href="#top" id="auto_top"><img src="images/hamburger.ico" alt="menu deroulant" class="menu-hamburger"
+                onclick="open_close()"></a>
+
+    </nav>
+
+    <header>
+
+        <div class="global_container">
+
+            <ul>
+                <li> <a href="pdf/Presentation generale.pdf"> 0 - Présentation générale  </a> </li>
+            </ul>
+
+            <h1> Compétences Epreuve E4 : </h1>
+
+            <ul>
+                <li> <a href="pdf/Gérer le patrimoine informatique.pdf"> 1 - Gérer le patrimoine informatique </a> </li>
+                <li> <a href="pdf/Répondre aux incidents et aux demandes d’assistance et d’évolution.pdf"> 2 - Répondre aux incidents et aux demandes d'évolution </a> </li>
+                <li> <a href="pdf/Développer la présence en ligne de l'oranisation.pdf"> 3 - Développer la présence en ligne de l'entreprise </a> </li>
+                <li> <a href="pdf/Travailler en mode projet.pdf"> 4 - Travailler en mode projet </a> </li>
+                <li> <a href="pdf/Mettre à disposition des utilisateurs un service informatique.pdf"> 5 - Mettre à disposotion des utilisateurs un service informatique </a> </li>
+                <li> <a href="pdf/Organiser son développement professionnel.pdf"> 6 - Organiser son développement professionnel </a> </li>
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <script type="text/javascript">
+
+        var isActive = document.getElementById("navlinks");
+
+        function open_close() {
+
+            if (isActive.classList == "navlinks active") {
+                document.getElementById("navlinks").style.marginLeft = '-100%';
+                document.querySelector("body").style.overflow = 'visible';
+                isActive.classList.remove("active");
+            } else {
+                document.getElementById("navlinks").style.marginLeft = '0%';
+                document.querySelector("body").style.overflow = 'hidden';
+                isActive.classList.add("active");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+
+</html>

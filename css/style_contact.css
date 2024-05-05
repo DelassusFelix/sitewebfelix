@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    color: whitesmoke;
+    background-color: black;
+}
+
+header {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background_accueil_flou.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.25em;
+}
+
+.navbar .logo {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.navbar .navlinks ul {
+    display: flex;
+}
+
+.navbar .navlinks ul li {
+    margin: 0 30px;
+}
+
+.navbar .navlinks ul li a.active {
+    color: #00ff00;
+    font-weight: 700;
+}
+
+.navbar #auto_top {
+    z-index: 2;
+}
+
+#auto_top {
+    display: none;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    padding-right: 50px;
+    z-index: 2;
+    width: 50px;
+}
+
+.global_container {
+    width: 60%;
+    padding: 5vw 8vw 5vw 8vw;
+    margin: 0 0 7vh 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.global_container h1 {
+    text-align: center;
+    font-size: calc(1.5rem + 1.5vw);
+    text-shadow: black 1px 0 10px;
+    margin-bottom: 25px;
+}
+
+.formulaire_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mail h3 {
+    margin: 0 1vw 0 1vw;
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 1vw 0 2vw 0;
+}
+
+.tel h3 {
+    margin: 0 1vw 0 1vw;
+}
+
+.input_container {
+    display: flex;
+    width: 100%;
+}
+
+.personal_infos_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.personal_infos_container input {
+    border: 1px solid whitesmoke;
+    margin: 1vw;
+    padding: 10px;
+    border-radius: 4px;
+    width: 80%;
+}
+
+.personal_infos_container input,
+.formulaire_container textarea {
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: all linear 0.2s;
+    color: whitesmoke;
+    font-size: 1.15em;
+}
+
+.personal_infos_container input::placeholder,
+.formulaire_container textarea::placeholder {
+    color: rgba(245, 245, 245, 0.7);
+}
+
+.personal_infos_container input:focus,
+.formulaire_container textarea:focus {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 7px white;
+    transition: all linear 0.2s;
+}
+
+.message_container {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.formulaire_container textarea {
+    resize: none;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    margin: 1vw;
+    border-radius: 4px;
+    width: 80%
+}
+
+#chp_required {
+    font-size: x-small;
+    color: rgba(245, 245, 245, 0.85);
+    margin-top: 5vh;
+}
+
+.formulaire_container input[type="submit"] {
+    margin-top: 10px;
+    width: 25vw;
+    min-width: 100px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.15em;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all linear 0.2s;
+}
+
+.formulaire_container input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 7px white;
+    transition: all linear 0.2s;
+}
+
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        padding: 30px;
+    }
+
+    .navlinks {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(7px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: margin-left 0.5s ease;
+    }
+
+    .navbar .menu-hamburger,
+    #auto_top {
+        display: block;
+    }
+
+    .navlinks ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .navlinks ul li {
+        margin: 30px 0;
+        font-size: 1.5em;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .global_container {
+        width: 80%;
+        padding: 5vw;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .formulaire_container .input_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .personal_infos_container {
+        align-items: center;
+        width: 100%
+    }
+
+    .personal_infos_container input {
+        width: 60%;
+        margin-top: 4vh;
+    }
+
+    .message_container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 8vh;
+    }
+
+    .message_container textarea {
+        width: 80%;
+        height: 15vh;
+    }
+
+
+
+    .tableau .sisr {
+        border: none;
+    }
+
+    .tableau tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+}
+
+
+@media screen and (max-height: 800px) and (max-width: 1600px) {
+
+    .navbar .navlinks ul li {
+        margin: 15px 0;
+        font-size: 1.2em;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .navbar .logo {
+        font-size: 1.9em;
+    }
+
+    .mail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tel {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4vh;
+    }
+
+    .input_container input {
+        width: 80%;
+        font-size: 0.9em;
+    }
+
+    .message_container textarea {
+        font-size: 0.9em;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .navbar .logo {
+        font-size: 1.6em
+    }
+
+    .navbar .menu-hamburger {
+        right: 20px;
+    }
+
+    .navbar .logo {
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    .navbar .menu-hamburger {
+        width: 25px;
+        top: 44px;
+    }
+
+    .navbar .logo {
+        font-size: 1.2em;
+    }
+
+}

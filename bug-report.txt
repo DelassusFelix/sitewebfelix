@@ -1,0 +1,10 @@
+Gestionnaire des bugs recensés sur mon portefolio 
+
+- Navbar :
+
+Lorsque la navbar passe du mode menu hambuger au mode étiré, 
+elle se retrouve sur la gauche de l'écran au lieu de sa position de base, 
+c'est à dire centrée par rapport au logo.
+
+RESOLU : le problème venait de mon tag #auto_top qui n'affichait rien mais qui prenait de la place sur l'écran.
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <title> Mon profil </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portefolio de présentation de mon parcours">
+    <meta name="keywords" content="BTS, SIO, Portefolio">
+    <meta name="author" content="Delassus Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/logo.ico">
+    <link rel="stylesheet" href="css/style_profil.css">
+
+</head>
+
+<script src="js/gestion_iframe.js"></script>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">DELASSUS Felix</a>
+        <div class="navlinks" id="navlinks">
+            <ul>
+                <li> <a href=index.html> Accueil </a> </li>
+                <li> <a href=a_propos.html> Le BTS SIO </a> </li>
+                <li> <a class="active" href="profil.html"> Profil </a> </li>
+                <li> <a href=competences.html> Compétences </a> </li>
+                <li> <a href=veille_techno.html> Veille Techno </a> </li>
+                <li> <a href=contact.html> Contact </a> </li>
+            </ul>
+        </div>
+
+        <a href="#top" id="auto_top"><img src="images/hamburger.ico" alt="menu deroulant" class="menu-hamburger" onclick="open_close()"></a>
+
+    </nav>
+
+    <script type="text/javascript">
+
+var isActive = document.getElementById("navlinks");
+
+function open_close() {
+
+    if (isActive.classList == "navlinks active") {
+        document.getElementById("navlinks").style.marginLeft = '-100%';
+        document.querySelector("body").style.overflow = 'visible';
+        isActive.classList.remove("active");
+    } else {
+        document.getElementById("navlinks").style.marginLeft = '0%';
+        document.querySelector("body").style.overflow = 'hidden';
+        isActive.classList.add("active");
+    }
+}
+
+
+    </script>
+
+    <header>
+
+        <div class="global_container">
+
+            <h1 id="titre_principal">Profil</h1>
+
+            <h1 id="titre_secondaire">
+                - A propos de moi
+            </h1> <br>
+
+            <p>
+                Je m'appelle Félix, j'ai 20 ans et je suis en seconde année de BTS SIO option SLAM au lycée Gaston
+                Berger à
+                Lille, j'ai toujours été passionné d'informatique et j'ai choisi le BTS SIO dans le but de travailler
+                dans
+                la cybersécurité plus tard.
+            </p><br><br>
+
+            <h1 id="titre_secondaire">
+                - Mes compétences
+            </h1> <br><br>
+
+            <div class="competences">
+
+                <h3>Programmation :</h3> <br>
+
+                <div class="competence_container">
+                    <p>HTML : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar html">
+                            80%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence_container">
+                    <p>CSS : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar css">
+                            70%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence_container">
+                    <p>Javascript : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar js">
+                            60%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence_container">
+                    <p>PHP : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar php">
+                            75%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence_container">
+                    <p>JAVA : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar java">
+                            45%
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h3>Base de données :</h3> <br>
+
+                <div class="competence_container">
+                    <p>MySQL : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar mysql">
+                            80%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competence_container">
+                    <p>MariaDB : </p>
+                    <div class="progressbar_container">
+                        <div class="progressbar mariadb">
+                            40%
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <div class="projet_pro">
+
+                <h1 id="titre_secondaire">
+                    - Mon projet professionnel
+                </h1> <br>
+
+                <p>
+                    Ayant pour but de travailler dans la cybersécurité, j'ai choisi le BTS SIO afin d'acquérir des bases
+                    en informatique et en programmation. Cela me permettra d'intégrer une école en cybersécurité pour
+                    obtenir un Master en cybersécurité, la finalité étant de devenir ingénieur en cybersécurité.
+                </p>
+
+            </div> <br><br>
+
+            <iframe id="consult_cv" src="download/cv.pdf"></iframe>
+            <input id="close_cv" type="submit" value="X" onclick="close_iframe()">
+
+
+            <br>
+            <h1 id="titre_secondaire">
+                - Mon CV
+            </h1> <br>
+
+            <div class="cv_buttons">
+
+                <a id="dlcv" href="download/cv.pdf" download="cv.pdf">Télécharger mon CV</a>
+                <a id="open_cv" onclick="open_iframe()">Consulter mon CV</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+</body>
